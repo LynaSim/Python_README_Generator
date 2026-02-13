@@ -1,1 +1,25 @@
-Random Project titleThis is a highly versatile string generator. You can generate a random sequence that contains numbers, letters, and special characters. Either in combination with each other or by themselves. For example, you can generate a random string containing only numbers.GNU General Public License family
+# Title  
+## Description  
+
+Description  
+
+## How to Install  
+
+installation instructions  
+
+## How to Use  
+
+how to use  
+
+## License Type  
+
+GNU General Public License family  
+
+## Author  
+
+Lyna  
+
+## Contact  
+
+email  
+
