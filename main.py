@@ -1,6 +1,8 @@
 from InquirerPy import inquirer
 from InquirerPy.base.control import Choice
+# import os
 
+# Questions
 project_title = inquirer.text(message="What is your project's title?: ").execute()
 print("variable check: " + project_title)
 description = inquirer.text(message="Please add a description: ").execute()
@@ -19,7 +21,10 @@ author = inquirer.text(message="Author's name: ").execute()
 contact = inquirer.text(message="Contact information: ").execute()
 print("Thank you for completing this!")
 
-
-
+# Create a separate file and write the value of a variable in it
+with open("README.md", "a") as file:
+    file.write(project_title)
+    file.write(description)
+    file.write(license)
 
 
