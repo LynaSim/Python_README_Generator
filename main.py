@@ -4,6 +4,7 @@ from rich.console import Console
 from rich.progress import track #progress bar
 import time
 import logging
+from rich.logging import RichHandler
 
 #Initialise RICH console
 console = Console()
@@ -32,6 +33,16 @@ def creating_file_simulation():
 # Launches the progress bar before the README is created
 creating_file_simulation()
 
+# Function for pretty RICH logging information
+def setup_logging():
+    logging.basicConfig(
+        level ="INFO", format="%(message)s", datefmt="[%X]", handlers=[RichHandler()]
+    )
+    logger = logging.getLogger("rich")
+    return logger
+
+logger = setup_logging()
+
 # Creates a separate file and appends value of a variable in it
 # Adds markdown formatting
 with open("README.md", "a") as file:
@@ -42,6 +53,7 @@ with open("README.md", "a") as file:
     file.write(f"## License Type  \n\n{license}  \n\n")
     file.write(f"## Author  \n\n{author}  \n\n")
     file.write(f"## Contact  \n\n{contact}  \n\n")
+    logger.info("Your README.md file was successfully created!")
 
 
 
