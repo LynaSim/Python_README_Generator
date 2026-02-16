@@ -3,6 +3,7 @@ from InquirerPy.base.control import Choice #dropdown
 from rich.console import Console
 from rich.progress import track #progress bar
 import time
+import logging
 
 #Initialise RICH console
 console = Console()
@@ -21,15 +22,17 @@ license = inquirer.select(message="Select a license type: ", choices=[
 ]).execute()
 author = inquirer.text(message="Author's name: ").execute()
 contact = inquirer.text(message="Contact information: ").execute()
-print("Thank you for completing this!")
 
-#Adds a progress bar simulation
-def creating_readme_simulation():
+# Function progress bar simulation
+def creating_file_simulation():
     console.print("[bold cyan]Creating your README.md file...[/bold cyan]")
     for _ in track(range(10), description="Processing..."):
         time.sleep(0.2)
 
-# Creates a separate file and write the value of a variable in it
+# Launches the progress bar before the README is created
+creating_file_simulation()
+
+# Creates a separate file and appends value of a variable in it
 # Adds markdown formatting
 with open("README.md", "a") as file:
     file.write(f"# {project_title}  \n")
@@ -40,4 +43,5 @@ with open("README.md", "a") as file:
     file.write(f"## Author  \n\n{author}  \n\n")
     file.write(f"## Contact  \n\n{contact}  \n\n")
 
-creating_readme_simulation()
+
+
