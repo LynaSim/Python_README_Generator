@@ -60,5 +60,5 @@ def get_all_input():
         filter=lambda result: result.strip()
     ).execute()
 
-    return all_input
+    return all_input #important
 
