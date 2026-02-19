@@ -6,26 +6,25 @@ import time
 import logging
 from rich.logging import RichHandler
 from input_gathering import get_all_input
-from file_generator import creating_file_simulation
+from file_generator import progress_bar
 from file_generator import create_file
+from file_generator import setup_logging
 
+
+console = Console()
+setup_logging() # Loads the pretty logging utility
+logger = setup_logging() # activates logger function
 
 # Gather all inputs from prompts and store them in dictionary
 all_input = get_all_input()
 print(f"This is the value of dictionary all_input: {all_input}")
 
 # Launches the progress bar before the README is created
-creating_file_simulation()
-
-# # Function for pretty RICH logging information
-# def setup_logging():
-#     logging.basicConfig(
-#         level ="INFO", format="%(message)s", datefmt="[%X]", handlers=[RichHandler()]
-#     )
-#     logger = logging.getLogger("rich")
-#     return logger
-
-# logger = setup_logging()
+progress_bar()
 
 # Creates file and write all input to file
 create_file(all_input)
+
+# Informs of success
+logger.info("Your README.md file was successfully created!")
+
