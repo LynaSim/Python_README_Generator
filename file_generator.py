@@ -6,6 +6,7 @@ from rich.logging import RichHandler
 from rich.panel import Panel
 from rich import print
 from rich.text import Text
+from InquirerPy import inquirer
 
 #Initialise RICH console
 console = Console()
@@ -14,11 +15,12 @@ def display_welcome():
     console.print(
         Panel(
             Text("\n README.md GENERATOR", justify="center"),
-            title="Welcome",
+            title="Welcome to my",
             subtitle="Made with Python, InquirerPy and Rich",
             height=5
             )
         )
+    console.input("Press Enter to start.")
 
 # Function progress bar simulation
 def progress_bar():

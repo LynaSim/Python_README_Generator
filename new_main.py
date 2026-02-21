@@ -14,7 +14,7 @@ from rich.panel import Panel
 from rich import print
 
 console = Console() # Initialise Rich Console
-logger = setup_logging() #  Initialise Rich Logger
+logger = setup_logging() #  Initialise Rich Logging
 
 def main():
 
