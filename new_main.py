@@ -9,22 +9,30 @@ from input_gathering import get_all_input
 from file_generator import progress_bar
 from file_generator import create_file
 from file_generator import setup_logging
+from file_generator import display_welcome
+from rich.panel import Panel
+from rich import print
 
+console = Console() # Initialise Rich Console
+logger = setup_logging() #  Initialise Rich Logger
 
-console = Console()
-setup_logging() # Loads the pretty logging utility
-logger = setup_logging() # activates logger function
+def main():
 
-# Gather all inputs from prompts and store them in dictionary
-all_input = get_all_input()
-print(f"This is the value of dictionary all_input: {all_input}")
+    # Welcome screen
+    display_welcome()
 
-# Launches the progress bar before the README is created
-progress_bar()
+    # Gather all inputs from prompts and store them in dictionary
+    all_input = get_all_input()
 
-# Creates file and write all input to file
-create_file(all_input)
+    # Launches the progress bar before the README is created
+    progress_bar()
 
-# Informs of success
-logger.info("Your README.md file was successfully created!")
+    # Creates file and write all input to file
+    create_file(all_input)
+
+    # Informs of success
+    logger.info(":white_heavy_check_mark: [bold on green1] SUCCESS! [/] [yellow]Your README.md is ready![/]:sparkles::sparkles:")
+
+if __name__ == "__main__":
+    main()
 

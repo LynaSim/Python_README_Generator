@@ -61,4 +61,3 @@ def get_all_input():
     ).execute()
 
     return all_input #important
-
