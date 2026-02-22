@@ -1,5 +1,3 @@
-from InquirerPy import inquirer
-
 # Creates a file and appends variable values
 # Adds Markdown formatting
 def create_file(all_input):
