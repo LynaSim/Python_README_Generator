@@ -10,11 +10,11 @@ from file_generator import progress_bar
 from file_generator import create_file
 from file_generator import setup_logging
 from file_generator import display_welcome
+from file_generator import success_log
 from rich.panel import Panel
 from rich import print
 
 console = Console() # Initialise Rich Console
-logger = setup_logging() #  Initialise Rich Logging
 
 def main():
 
@@ -31,7 +31,7 @@ def main():
     create_file(all_input)
 
     # Informs of success
-    logger.info(":white_heavy_check_mark: [bold on green1] SUCCESS! [/] [yellow]Your README.md is ready![/]:sparkles::sparkles:")
+    success_log()
 
 if __name__ == "__main__":
     main()

@@ -6,14 +6,14 @@ def get_all_input():
 
     # Questions
     all_input['project_title']= inquirer.text(
-        message="What is your project's title?: ",
+        message="Project title: ",
         validate = lambda result: len(result.strip()) > 0,
         invalid_message = "Input cannot be empty.",
         filter=lambda result: result.strip()
     ).execute()
 
     all_input['description'] = inquirer.text(
-        message="Please add a description: ", 
+        message="Description: ", 
         multiline = True,
         validate = lambda result: len(result.strip()) > 0,
         invalid_message = "Input cannot be empty.",
@@ -47,7 +47,7 @@ def get_all_input():
     ).execute()
 
     all_input['author'] = inquirer.text(
-        message="Author's name: ",
+        message="Name of the author: ",
         validate = lambda result: len(result.strip()) > 0,
         invalid_message = "Input cannot be empty.",
         filter=lambda result: result.strip()

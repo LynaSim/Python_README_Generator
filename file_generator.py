@@ -14,13 +14,14 @@ console = Console()
 def display_welcome():
     console.print(
         Panel(
-            Text("\n README.md GENERATOR", justify="center"),
-            title="Welcome to my",
-            subtitle="Made with Python, InquirerPy and Rich",
-            height=5
+            Text("\n README.md GENERATOR", style="yellow", justify="center"),
+            title="[magenta]Welcome to my[/]",
+            subtitle="[magenta]Made with Python:snake:, InquirerPy and Rich[/]",
+            height=5,
+            border_style="yellow"
             )
         )
-    console.input("Press Enter to start.")
+    console.input("\n [yellow dim]Press Enter to start.[/]")
 
 # Function progress bar simulation
 def progress_bar():
@@ -38,6 +39,10 @@ def setup_logging():
     )
     logger = logging.getLogger("rich")
     return logger
+
+def success_log():
+    logger = setup_logging() #  Initialise Rich Logging
+    logger.info(":white_heavy_check_mark: [bold on green1] SUCCESS! [/] [yellow]Your README.md is ready![/]:sparkles::sparkles:")
 
 # Creates a separate file and appends value of a variable to it
 # Adds Markdown formatting
