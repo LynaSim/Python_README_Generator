@@ -1,6 +1,0 @@
-project_title = inquirer.text(message="What is your project's title?: ").execute()
-# print("variable check: " + project_title)
-# description = inquirer.text(message="Please add a description: ").execute()
-# print("variable check: " + description)
-# install_instructions = inquirer.text("Installation instructions: ").execute()
-# usage_info = inquirer.text(message="How to install?: ").execute()
