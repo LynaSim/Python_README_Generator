@@ -7,9 +7,10 @@ from rich.panel import Panel
 from rich import print
 from rich.text import Text
 
-#Initialise RICH console
+# Initialise RICH console
 console = Console()
 
+# Welcome screen
 def display_welcome():
     console.print(
         Panel(
@@ -22,11 +23,13 @@ def display_welcome():
         )
     console.input("\n [yellow dim]Press Enter to start.[/]")
 
+
 # Function progress bar simulation
 def progress_bar():
     console.print("[bold cyan]Creating your README.md file...[/bold cyan]")
     for _ in track(range(20), description="[bold green]Processing..."):
         time.sleep(0.1)
+
 
 # Tells Python to hand the logging job to Rich
 def setup_logging():
@@ -39,6 +42,8 @@ def setup_logging():
     logger = logging.getLogger("rich")
     return logger
 
+
+# Success log to confirm file created
 def success_log():
     logger = setup_logging() #  Initialise Rich Logging
     logger.info(":white_heavy_check_mark: [bold on green1] SUCCESS! [/] [yellow]Your README.md is ready![/]:sparkles::sparkles:")
