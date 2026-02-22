@@ -6,11 +6,12 @@ import time
 import logging
 from rich.logging import RichHandler
 from input_gathering import get_all_input
-from file_generator import progress_bar
+from pretty_utils import progress_bar
+from pretty_utils import setup_logging
+from pretty_utils import display_welcome
+from pretty_utils import success_log
 from file_generator import create_file
-from file_generator import setup_logging
-from file_generator import display_welcome
-from file_generator import success_log
+
 from rich.panel import Panel
 from rich import print
 
