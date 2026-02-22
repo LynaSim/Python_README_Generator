@@ -1,9 +1,9 @@
 from InquirerPy import inquirer
 from InquirerPy.base.control import Choice #dropdown
 from rich.console import Console
-from input_gathering import get_all_input
+from gather_input import get_all_input
 from pretty_utils import progress_bar, display_welcome, success_log
-from file_generator import create_file
+from create_file import create_file
 
 console = Console() # Initialise Rich Console
 
