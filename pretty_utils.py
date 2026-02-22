@@ -16,7 +16,7 @@ def display_welcome():
         Panel(
             Text("\n README.md GENERATOR", style="yellow", justify="center"),
             title="[magenta]Welcome to my[/]",
-            subtitle="[magenta]Made with Python:snake:, InquirerPy and Rich[/]",
+            subtitle="[magenta]Made in Python:snake:, with InquirerPy and Rich[/]",
             height=5,
             border_style="yellow"
             )
